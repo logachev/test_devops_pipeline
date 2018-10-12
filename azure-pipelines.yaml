@@ -1,0 +1,10 @@
+# Docker image
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+variables:
+  imageName: 'terraform-azurerm-postgresql:$(build.buildId)'
+
+steps:
+- script: bash test.sh
+  displayName: 'build'
