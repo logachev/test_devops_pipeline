@@ -8,3 +8,6 @@ variables:
 steps:
 - script: bash test.sh $(client_id) $(client_secret) $(system.debug) $SECRET_CLIENT_ID
   displayName: 'build'
+
+- script: env
+  display name: "env"
