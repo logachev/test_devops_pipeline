@@ -10,4 +10,4 @@ steps:
   displayName: 'build'
 
 - script: env
-  display name: "env"
+  displayName: "env"
