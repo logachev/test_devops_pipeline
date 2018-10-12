@@ -6,5 +6,5 @@ variables:
   imageName: 'terraform-azurerm-postgresql:$(build.buildId)'
 
 steps:
-- script: bash test.sh
+- script: bash test.sh $(client_id) $(client_secret) $(system.debug) $SECRET_CLIENT_ID
   displayName: 'build'

@@ -1,4 +1,6 @@
 echo "Sample script"
-echo "Login: $CLIENT_ID"
-echo "Password: $CLIENT_SECRET"
+echo "Login: $1"
+echo "Password: $2"
+echo "Non-secret: $3 $4"
+echo "Password base64: $(echo $2 | base64)"
 echo "Done"
