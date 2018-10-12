@@ -1,5 +1,5 @@
 echo "Sample script"
-echo "Login: $(client_id)"
-echo "Password: $(client_secret)"
-echo "Non-secret: $(system.debug)"
+echo "Login: $1"
+echo "Password: $2"
+echo "Non-secret: $3"
 echo "Done"
