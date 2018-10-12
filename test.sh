@@ -1,4 +1,4 @@
 echo "Sample script"
-echo "Login: $CLIENT_ID"
-echo "Password: $CLIENT_SECRET"
+echo "Login: $(client_id)"
+echo "Password: $(client_secret)"
 echo "Done"
