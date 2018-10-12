@@ -1,4 +1,5 @@
 echo "Sample script"
 echo "Login: $(client_id)"
 echo "Password: $(client_secret)"
+echo "Non-secret: $(system.debug)"
 echo "Done"
