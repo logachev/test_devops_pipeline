@@ -1,10 +1,11 @@
-# Docker image
 pool:
   vmImage: 'Ubuntu 16.04'
 
 variables:
-  imageName: 'terraform-azurerm-postgresql:$(build.buildId)'
+  SAMPLE_VARIABLE: 'test-value'
 
 steps:
+- script: 'echo "Script: ${SAMPLE_VARIABLE}"'
+  displayName: Pipeline
 - script: bash test.sh
-  displayName: 'build'
+  displayName: 'Script'
