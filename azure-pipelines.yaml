@@ -13,8 +13,7 @@ jobs:
     value: $(new-env-vars)
 
   steps:
-  - script: |
-      'echo "##vso[task.setvariable variable=NEW_ENV]$(new-env)"'
+  - script: 'echo "##vso[task.setvariable variable=NEW_ENV]$(new-env)"'
 
   - script: 'echo "NEW_ENV: ${NEW_ENV}" && echo "new-env: $(new-env)" && echo "new-env{}: ${new-env}" && echo "NEW_ENV_VARS: ${NEW_ENV_VARS}" && echo "new-env-vars: $(new-env-vars)" && echo "new-env-vars{}: ${new-env-vars}"'
 #- script: 'echo "Script: ${SAMPLE_VARIABLE}"'
