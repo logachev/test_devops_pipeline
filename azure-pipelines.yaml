@@ -10,7 +10,7 @@ variables:
   value: $(new-env-vars)
 
 steps:
-- script: 'echo "NEW_ENV: ${NEW_ENV}" && echo "new-env: ${new-env}" && echo "NEW_ENV_VARS: ${NEW_ENV_VARS}" && echo "new-env-vars: ${new-env-vars}"'
+- script: 'echo "NEW_ENV: ${NEW_ENV}" && echo "new-env: $(new-env)" && Necho "NEW_ENV_VARS: ${NEW_ENV_VARS}" && echo "new-env-vars: $(new-env-vars)"'
 #- script: 'echo "Script: ${SAMPLE_VARIABLE}"'
 #  displayName: Pipeline
 #- script: bash test.sh
