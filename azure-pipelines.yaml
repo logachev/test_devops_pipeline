@@ -3,11 +3,14 @@ pool:
 
 variables:
 - group: SampleGroup
+- group: SampleGroupVars
 - name: NEW_ENV
   value: $(new-env)
+- name: NEW_ENV_VARS
+  value: $(new-env-vars)
 
 steps:
-- script: 'echo "Variable: ${NEW_ENV}"'
+- script: 'echo "NEW_ENV: ${NEW_ENV}" && echo "new-env: ${new-env}" && echo "NEW_ENV_VARS: ${NEW_ENV_VARS}" && echo "new-env-vars: ${new-env-vars}"'
 #- script: 'echo "Script: ${SAMPLE_VARIABLE}"'
 #  displayName: Pipeline
 #- script: bash test.sh
