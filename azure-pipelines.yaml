@@ -1,12 +1,11 @@
-pool:
-  vmImage: 'Ubuntu 16.04'
-
 variables:
 - group: SampleGroup
 - group: SampleGroupVars
 
 jobs:
 - job: test_job
+  pool:
+    vmImage: 'Ubuntu 16.04'
   variables:
   - name: NEW_ENV
     value: $(new-env)
