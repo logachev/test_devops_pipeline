@@ -2,10 +2,13 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 variables:
-  SAMPLE_VARIABLE: 'test-value'
+- group: SampleGroup
+- name: NEW_ENV
+  value: $(new-env)
 
 steps:
-- script: 'echo "Script: ${SAMPLE_VARIABLE}"'
-  displayName: Pipeline
-- script: bash test.sh
-  displayName: 'Script'
+- script: 'echo "Variable: ${NEW_ENV}"'
+#- script: 'echo "Script: ${SAMPLE_VARIABLE}"'
+#  displayName: Pipeline
+#- script: bash test.sh
+#  displayName: 'Script'
